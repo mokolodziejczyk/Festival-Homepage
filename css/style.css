@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+/* implementujemy fonty z google fonts, to się zawsze dzieje na samej górze*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* CSS stylujemy elementy podając ich selektor i właściwości */
+
+
+* {
+	box-sizing: border-box; /* żeby paddingi nie zwiększały szerokości boxu i nie przesuwał treści w nim */
+	transition: 500ms; 
+}
+
+a {text-decoration: none;}
+
+
+html{
+	scroll-behavior: smooth;
+	font-family: 'Noto Sans', sans-serif;
+	/* bazowa wielkość fontu */
+	font-size: 10px;
+}
+
+body{
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+
+/* Style nawigacji mobilnej */
+
+.burger{
+	position: fixed;
+	right: 3rem;
+	top: 2rem;
+	background-color: #ddd;
+	font-size: 4rem;
+	padding: 1.5rem 1rem;
+	cursor: pointer;
+	display: flex;
+}
+.nakladka{
+	position: fixed;
+	background-color: #002f30;
+	right: 0;
+	z-index: 1;
+	height: 100%;
+	width: 0%; /*docelowo 0*/
+	overflow: hidden; /*wszystko co wystaje poza box zostanie ukryte*/
+	opacity: .95;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nakladka ol{
+	width: 100%;
+}
+.nakladka ol a{
+	display: block;
+	color: #fff;
+	font-weight: 800;
+	font-size: 4vw;
+	padding: 6vh 0;
+	text-align: center;
+	
+}
+.nakladka ol a:hover{
+	
+	background-color: #fff;
+	color: #333;
+}
+.zamknijX{
+	
+	position: absolute; /*to służy do tego, żeby ustawić krzyżyk tam gdzie chcemy, odnosi się do kontenra nadrzędnego z fixed lub relative, a jeśli nie mają tego ustawionego to do okna przeglądarki*/
+	
+	top: 3rem;
+	right: 3.8rem;
+	font-size: 6rem;
+	color: #fff;
+	
+}
+
+
+
+
+
+/* Wszystkie sekcje */
+section {
+	min-height: 100vh;
+	/*FLEX CONTAINTER*/
+	/*Uruchamiamy flexbox*/
+	display: flex;
+	flex-direction: row; /* tak jest domyślnie i niżej zmieniamy*/
+	align-items: stretch; /*tak samo domyślnie*/
+	align-items: center;
+	justify-content: center;
+
+}
+
+/* Wszystkie zawartości sekcji */
+/* Selektor CLASS ma prefix '.' */
+.zawartosc{
+	max-width: 1200px;
+	/*flex items*/	
+}
+
+/*Poszczególne sekcje i ich zawatości */
+/* Selektory ID mają prefix '#' */
+#pierwsza{
+	background: url("../images/gif.gif") no-repeat center center;
+	background-size: 100%; /*dzięki temu zdjęcie się skaluje - tez z mobile*/
+	background-color: #002f30;
+	
+}
+
+
+#pierwsza .tytul {
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 3rem;
+	font-weight: 100;
+	line-height: 1em;
+	color: white;
+	position: absolute;
+	background-color: none;
+	left: 0;
+	top: 0;
+	padding: 2rem;
+	
+	
+}
+
+#pierwsza .strzalka {
+	display: none;
+}
+
+#pierwsza a {
+/*	color: white;
+	font-size: 2rem;
+	font-family: 'Archivo Black', sans-serif;
+	text-transform: uppercase;
+	border-radius: 2rem;
+	position: absolute;
+	background-color: #002f30;
+	bottom: 0;
+	margin: 5rem;
+*/
+
+	
+}
+#pierwsza a:hover {
+	padding: 1.5rem;
+}
+
+
+
+#druga{
+	background: url("../images/background2.png");
+	background-size: cover;
+	display:flex;
+	flex-direction: column;
+}
+
+#druga .tytul {
+	font-size: 6rem;
+	font-family: 'Archivo Black', sans-serif;
+	padding: 5rem;
+	text-align: center;
+	color: black;
+		
+}
+
+#druga .zawartosc {
+	
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+		
+}
+
+#druga img {
+	margin-right: 30px;
+	margin-top: 30px;
+	box-shadow: 7px 7px #c4c227;
+	
+}
+
+#druga h2 {
+	font-size: 2rem;
+	font-weight: 100;
+	margin-top: 10px;
+	
+} 
+
+#druga .image {
+   position:relative;
+   display:inline-block;
+}
+#druga .overlay {
+   display:none;
+}
+#druga .image:hover .overlay {
+   width:200px;
+   height:200px;
+   background: #002f30;
+	opacity: 0.9;
+	font-size: 5rem;
+	font-family: 'Archivo Black', sans-serif;
+	text-align: center;
+	color: white;
+   position:absolute;
+   top:0;
+	left:0;
+	margin-top:30px;
+   display:inline-block;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   box-sizing:border-box;
+}
+
+#druga .date {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+}
+
+
+
+#trzecia{
+	background: url("../images/background3.png") no-repeat center fixed /*daje wrażenie że zdjęcie stoi w miejscu*/;
+	background-size: cover; /*dzięki temu zdjęcie się skaluje - tez z mobile*/
+	display:flex;
+	flex-direction: column;
+}
+
+#trzecia .tytul {
+	font-size: 6rem;
+	font-family: 'Archivo Black', sans-serif;
+	text-align: center;
+	color: white;
+	margin-bottom: 5rem;
+	
+		
+	
+	
+}
+
+#trzecia .zawartosc {
+	padding: 1rem;
+	display: grid;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+#trzecia article {
+	background-color: white;
+	padding: 2rem;
+	flex: 1 1 300px;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	line-height: 2.4rem;
+	box-shadow: 7px 7px #c4c227;
+	margin-bottom: 30px;
+	
+}
+
+#trzecia h2 {
+	font-size: 2.5rem;
+	font-weight: 200;
+	padding: 2rem;
+}
+
+#trzecia a {
+	color: black;
+	border-radius: 2rem;
+	float: right;
+	
+}
+#trzecia a:hover {
+	background-color: #c4c227;
+	color: white;
+	letter-spacing: 2px;
+	border-radius: 2rem;
+	padding: 1rem;
+}
+
+#trzecia .notatka {
+	background-color: #002f30;
+	color: white;
+	font-size: 1.2rem;
+	background-color: transparent;
+	text-align: center;
+	
+}
+
+#czwarta{
+	background-color: #CCC;
+	min-height: 60vh;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+#piata{
+	background-color: #002f30;
+	color: white;
+	min-height: 40vh;
+	flex-direction: column;
+	padding: 3vh 2rem;
+	font-size: 1.4rem;
+}
+
+#piata h5 {
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-family: 'Archivo Black', sans-serif;
+	padding: 1.5rem;
+}
+
+#piata .partners {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#piata .image {
+	padding: 2rem;
+}
+
+#piata .zawartosc {
+	display: flex;
+	padding: 4rem;
+	flex-wrap: wrap;
+	gap: 6vh;
+	
+}
+
+
+#piata .smtytul {
+	text-align: center;
+}
+
+#piata .smicons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#piata article {
+	flex: 1 1 220px;
+	
+}
+
+
+#piata article a {
+	padding: .4rem;
+	display: inline-block;
+	color: #c4c227;
+}
+
+#piata article a:hover {
+	background-color: #c4c227;
+	color: white;
+	border-radius: 1rem;
+	text-decoration: underline;
+}
+
+#piata .smicons :hover {
+	/*uruchamiamy animację podaną niżej*/
+	animation-name: animowaneikony;
+	animation-duration: 5s; /*domyślnie zero*/
+
+}
+
+/*ANIMACJE CSS */
+@keyframes animowaneikony {
+	0% {transform: rotate(0);}
+	25% { transform: rotate(180deg);}
+	100% {transform: rotate(180deg);}
+
+}
+
+
+
+
+#piata input[type=text]{
+	padding: 1rem;
+}	
+#piata input:not(#zgoda), #piata textarea{
+	width: 100%;
+	border: 0;
+	margin: .5rem 0;
+	font-family: inherit;
+	resize: vertical;
+	max-height: 300px;
+}
+
+#piata textarea{
+	min-height: 80px;
+}
+/* FOCUS czyli w momencie gdy element jest aktywny */
+#piata input:not(#zgoda):focus, #piata textarea:focus{
+	outline: 0; /*w sensie ramka*/
+	transform: scale(1.05);
+	border-radius: 10px;
+}
+
+/*dobieramy się do tego co narzuca przeglądarka*/
+::placeholder{
+	font-style: italic;
+}
+
+#piata input[type=reset],
+#piata input[type=submit]{
+	background-color: #c4c227;
+	color: white;
+	width: auto!important;
+	padding: 1rem !important;
+	font-weight: 800;
+}
+
+#piata h6 {
+	color: #777;
+	
+}
+
+
+
+
+
+
+
+/*od tego momentu są style responsywne*/
+/* MEDIA QUERIES - dostosowuje stronę, do jakiejś sytuacji - print, tv, handheld - urządzenie przenośne lub all */
+
+@media all and (max-width:600px) {
+	
+	
+	br {
+		display: none;
+	}
+	section {
+		min-height: 100vh; /*czyli 100% ale nie możemy wpisać 100%, bo musimy się posłguiwać tymi parametrami, co wcześniej*/
+	}
+	
+	
+	/*#pierwsza a {
+		background-color: #c4c227;
+		color: white;
+		padding: 2rem 6rem;
+	}
+	
+	#pierwsza a:hover{
+		background-color: white;
+		color: #c4c227;
+		padding: 2rem 6rem;
+	} */
+	
+	.nakladka ol a{
+	font-size: 9vw;
+	padding: 4vh 0;
+	
+}
+	
+	#pierwsza {
+		background-size: 150%;
+	}
+	
+	#pierwsza .strzalka {
+	padding: 1rem;
+	/* flex containter */
+	display: flex;
+	gap: 5rem;
+	flex-direction: column;
+	align-items: center; /* to działa, bo zmiana row>column powoduję zmianę justify>align */
+	position: absolute;
+	bottom: 0;
+	margin: 3rem;
+	/*uruchamiamy animację podaną niżej*/
+	animation-name: animowanastrzalka;
+	animation-duration: 5s; /*domyślnie zero*/
+	animation-delay: 1s; /*opóźnienie po załadownaiu strony*/
+	animation-iteration-count: infinite;
+
+}
+
+/*ANIMACJE CSS */
+@keyframes animowanastrzalka {
+	0% {transform: translateY(0);}
+	25% { transform: translateY(-10px);}
+	50% { transform: translateY(0px);}
+	75% { transform: translateY(-10px);}
+	100% {transform: translateY(0);}
+
+}
+	
+	#druga{
+		padding: 5rem;
+	}
+	#druga .tytul {
+	}
+	
+	#druga .zawartosc {
+		margin-bottom: 5rem;
+	}
+	
+	#trzecia .tytul {
+		margin-top: 5rem;
+	}
+	
+	#trzecia .notatka {
+		margin-bottom: 5rem;
+		padding: 2rem;
+		background-color: transparent;
+	}
+	
+	#piata {
+		font-size: 1.6rem;
+	}
+	#piata .zawartosc {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#piata h5 {
+		text-align: center;
+	}
+
+	#piata input:not(#zgoda), #piata textarea{
+		padding: 1rem;
+		margin-bottom: 1rem;
+		font-size: 1em;
+	
+	}
+
+	#piata input[type=reset],
+	#piata input[type=submit]{
+		padding: 2rem !important;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+/********* koniec *************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
