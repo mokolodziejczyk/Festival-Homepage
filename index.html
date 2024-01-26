@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+	<!--pierwze poniżej dodaliśmy my - to znacznik zapewniający skalowanie dokumentu na urządzeniach mobilnych -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Green Festival 2023</title>
+	
+	<!-- 1. Resetujemy domyślne style HTML, dołączając plik reset -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css"> 
+	
+	<!-- 2. Dołączamy własne style css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!--nawigacja-->
+	
+	<div class="nakladka" id="MENU">
+		<a href="javascript:void(0)" class="zamknijX" onClick="zamknijMenu()">
+			&times;
+		</a>
+		<ol onClick="zamknijMenu()">
+			<li> <a href="#pierwsza">Strona główna</a></li>
+			<li> <a href="#druga">Artyści</a></li>
+			<li> <a href="#trzecia">Bilety</a></li>
+			<li> <a href="#czwarta">Mapa</a></li>
+			<li> <a href="#piata">Partnerzy</a></li>
+		</ol>
+	
+	</div>
+	
+	<span class="burger" onClick="otworzMenu()">
+		&#9776;
+	</span>
+	
+	<script>
+		/*JavaScript*/
+		/*Otwieranie menu*/
+		function otworzMenu() {
+			document.getElementById("MENU").style.width="100%";
+			
+		}
+		/*Zamykanie MENU*/
+		function zamknijMenu() {
+			document.getElementById("MENU").style.width="0";
+		}
+	
+	</script>
+	
+	
+
+	<section id="pierwsza"> 
+		<div class="tytul">
+			<h1><p>11-13 sierpnia</p> <p>Olsztyn</p></h1>
+		</div>
+		
+		<div class="strzalka">
+			<a href="#druga"><img src="images/arrow.png" width="50" height="50"></a>
+		</div>
+		
+	</section>
+	
+	
+	<section id="druga"> 
+		<div class="tytul">
+				<h1> ARTYŚCI  </h1>
+		</div>
+		<div class="zawartosc">
+				
+			<div class="image">
+						<img src="images/podsiadlo.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">11/08</div>
+						</div>
+						<h2>Dawid Podsiadło</h2>
+					</div>
+					
+			<div class="image">
+						<img src="images/nosowska.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">11/08</div>
+						</div>
+						<h2>Katarzyna Nosowska</h2>
+					</div>
+					
+				
+			<div class="image">
+						<img src="images/brodka.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">11/08</div>
+						</div>
+						<h2>Monika Brodka</h2>
+					</div>
+			
+			<div class="image">
+						<img src="images/zalewski.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">12/08</div>
+						</div>
+						<h2>Krzysztof Zalewski</h2>
+					</div>
+			
+			
+			<div class="image">
+						<img src="images/ratkru.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">12/08</div>
+						</div>
+						<h2>Rat Kru</h2>
+					</div>
+		
+			<div class="image">
+						<img src="images/kacperczyk.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">12/08</div>
+						</div>
+						<h2>Kacperczyk</h2>
+					</div>
+		
+			<div class="image">
+						<img src="images/walus.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">12/08</div>
+						</div>
+						<h2>WaluśKraksaKryzys</h2>
+					</div>
+			
+			
+			<div class="image">
+						<img src="images/rogucki.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">13/08</div>
+						</div>
+						<h2>Karaś/Rogucki</h2>
+					</div>
+		
+			<div class="image">
+						<img src="images/rubens.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">13/08</div>
+						</div>
+						<h2>Rubens</h2>
+					</div>	
+
+			<div class="image">
+						<img src="images/ofelia.jpg" width="200" height="200">
+						<div class="overlay">
+							<div class="date">13/08</div>
+						</div>
+						<h2>Ofelia</h2>
+					</div>	
+		
+			</div>
+			
+	
+			
+
+		
+	</section>
+	
+		<section id="trzecia"> 
+		<div class="tytul">
+				<h1> BILETY  </h1>
+		</div>
+		<div class="zawartosc">
+		
+
+			
+				<article>
+				<h2>Karnet trzydniowy 11-13/08/2023</h2>
+				<p> </p>
+				<p>
+					Karnet normalny - 449 zł
+				</p>
+				<p>
+					Karnet dla dzieci od 6 do 12 lat - 224,50 zł
+				</p>
+				<a href="#trzecia">Kup bilet</a>
+			
+			</article>
+			
+				<article>
+				<h2>Bilet jednodniowy - piątek/sobota/niedziela</h2>
+				<p>
+					Bilet jednodniowy normalny - 229 zł
+				</p>
+				<p>
+					Bilet jednodniowy ulgowy - 114,50 zł
+				</p>
+			<a href="#trzecia">Kup bilet</a>
+			</article>
+		
+		</div>
+	
+	
+		<div class="notatka">
+				<h1>Zakup biletów poza autoryzowanymi punktami sprzedaży (Facebook, aukcje internetowe itp.) <br> stwarza ryzyko nabycia biletów nieoryginalnych lub nieważnych, które uniemożliwią wejście na koncert.  </h1>
+		</div>
+		
+
+	</section>
+	
+	
+	
+	
+	<section id="czwarta"> 
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2357.639957191527!2d20.447246576636193!3d53.77809664233125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27ee06ebc1e2d%3A0x4def51a2d09db8df!2sOlsztyn%20Green%20Festival!5e0!3m2!1spl!2spl!4v1684863382051!5m2!1spl!2spl" width="2000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		
+	</section>
+	
+	<section id="piata"> 
+		
+			<h5>Partnerzy</h5>
+		
+		<div class="partners">
+			
+				<div class="image">
+						<img src="images/perla.png" width="150" height="75">
+				</div>
+				
+				<div class="image">
+						<img src="images/hiro.png" width="150" height="75">
+				</div>
+				
+				<div class="image">
+						<img src="images/ams.png" width="150" height="75">
+				</div>
+				
+				<div class="image">
+						<img src="images/wyborcza.png" width="150" height="75">
+				</div>
+				
+				<div class="image">
+						<img src="images/agora.png" width="150" height="75">
+				</div>
+				
+				<div class="image">
+						<img src="images/instax.png" width="150" height="75">
+				</div>
+			</div>
+			
+			<div class="zawartosc">
+				
+				<div class="sm">
+					
+				<div class="smtytul">
+					
+				<h5>Social media</h5>
+				
+				</div>
+				
+				<div class="smicons">
+					
+				<div class="image">
+						<a href="https://www.instagram.com/olsztyngreenfestival"> <img src="images/instagram.png" width="70" height="70"> </a>
+				</div>
+				
+					<div class="image">
+						<a href="https://www.facebook.com/olsztyngreenfest"> <img src="images/facebook.png" width="70" height="70"> </a>
+				</div>
+					
+						<div class="image">
+						<a href="https://open.spotify.com/playlist/4vfuhskh8yQ3K9D5aD5ExI"> <img src="images/spotify.png" width="70" height="70"> </a>
+				</div>
+				
+			</div>	
+			</div>	
+			
+			<article>
+				<h5>Newsletter</h5>
+				<form>
+					<input type="text"
+					placeholder="Wpisz adres e-mail" required>
+				
+					
+					<hr>
+					<input type="checkbox" id="zgoda" required>
+					<label for="zgoda">Oświadczam, że zapoznałem(am) się z <a href="#">regulaminem</a>.</label>
+					<hr>
+					
+					<input type="submit" value="Wyślij">
+				
+				
+				</form>
+			</article>
+			
+			
+		</div>
+		
+					<h6>
+					Copyright &copy; 2023 Olsztyn Green Festival
+					</h6>
+		
+	</section>
+	
+</body>
+</html>
